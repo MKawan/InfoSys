@@ -1,0 +1,414 @@
+/* ========================================
+   Monochrome - Full UI
+======================================== */
+
+/* ----------------------------
+   Root e fundo principal
+---------------------------- */
+.root {
+    -fx-spacing: 10.0;
+    -fx-background-color: linear-gradient(
+        from 0.0% 0.0% to 100.0% 100.0%,
+        #2a2a2a 0.0%,
+        #3a3a3a 50.0%,
+        #4a4a4a 100.0%
+    );
+}
+
+/* ----------------------------
+   Box Layers
+---------------------------- */
+
+.box-layers-text{
+	-fx-alignment: center;  
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.box-layers-text2{
+	-fx-alignment: center;  
+	-fx-font-size: 10.0;
+	-fx-font-weight: bold;
+}
+
+/* ----------------------------
+   Linear Chart
+---------------------------- */
+.linear-chart {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.linear-node {
+    -fx-background-color: #555555; 
+    -fx-stroke-line-cap: round;
+}
+
+.chart-plot-background {
+    -fx-background-color: #3a3a3a;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 3.0px;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+    -fx-background-color: #888888;
+}
+
+.chart-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0.0 0.0 0.0 10.0px;
+}
+
+/* ----------------------------
+   Scroll Bar
+---------------------------- */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0.0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #555555;
+    -fx-background-radius: 3.0px;
+    -fx-background-insets: 0.0;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #888888;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-padding: 0.0;
+}
+
+/* ----------------------------
+   Textos
+---------------------------- */
+.text-window-process-loadlabel {
+    -fx-text-fill: #cccccc; 
+    -fx-font-weight: bold;
+}
+
+.text-window-status-data,
+.text-window-process-data {
+    -fx-text-fill: #bbbbbb;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+}
+
+.text-window-process-title {
+    -fx-fill: #dddddd;
+    -fx-font-size: 26.0px;
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-fill: #dddddd;
+    -fx-font-size: 20.0px;
+    -fx-font-weight: bold;
+}
+
+.text-table-graphics-linear {
+    -fx-font-size: 12.0px;
+}
+
+/* ----------------------------
+   Navigation Panel
+---------------------------- */
+.nav-panel {
+    -fx-spacing: 20.0;
+    -fx-alignment: center;
+    -fx-padding: 10.0;
+}
+
+.menu-button{
+	-fx-background-color: #555555;
+	-fx-background-radius: 7.0;  
+	-fx-width: 30.0;
+	-fx-min-width: 40.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #888888;
+}
+
+.nav-button {
+    -fx-background-color: #555555;
+    -fx-background-radius: 5.0;
+    -fx-min-width: 100.0;
+    -fx-min-height: 30.0;
+    -fx-font-size: 15.0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-button:hover {
+    -fx-background-color: #888888;
+}
+
+.nav-button-active {
+    -fx-background-color: #aaaaaa;
+    -fx-text-fill: #222222;
+}
+
+/* ----------------------------
+   Popups
+---------------------------- */
+.windowns-pops {
+    -fx-background-color: #3a3a3a;
+    -fx-padding: 10.0;
+}
+
+.infor-about {
+    -fx-fill: #eeeeee;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.infor-about-link {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+
+/* ----------------------------
+   Cards
+---------------------------- */
+.card {
+    -fx-background-color: #3a3a3a;
+    -fx-background-radius: 5.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.2), 5.0, 0.3, 1.0, 1.0);
+}
+
+.card-dark-graphics {
+    -fx-background-color: #3a3a3a;
+    -fx-background-radius: 5.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+	-fx-min-width: 150.0;
+	-fx-padding: 10.0 40.0 10.0 40.0; /* top right bottom left */
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.2), 5.0, 0.3, 1.0, 1.0);
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-fill: #dddddd;
+}
+
+.inner-circle-donut {
+    -fx-fill: #3a3a3a;
+}
+/* ----------------------------
+   Progress Bar
+---------------------------- */
+.progress-bar {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 10.0;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #555555;
+    -fx-background-radius: 10.0;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #888888, #cccccc);
+    -fx-background-radius: 10.0;
+}
+
+/* ----------------------------
+   Panel Cards
+---------------------------- */
+.panel-card {
+    -fx-height: 200.0;
+    -fx-max-height: 300.0;
+    -fx-min-width: 150.0;
+    -fx-padding: 15.0;
+}
+
+/* ----------------------------
+   Pie Chart
+---------------------------- */
+.default-color0.chart-pie { -fx-pie-color: #aaaaaa; }
+.default-color1.chart-pie { -fx-pie-color: #bbbbbb; }
+.default-color2.chart-pie { -fx-pie-color: #dddddd; }
+
+/* ----------------------------
+   Tables
+---------------------------- */
+.custom-table { -fx-background-color: #3a3a3a; }
+.table-view { -fx-background-color: transparent; }
+.table-view:focused { -fx-background-color: transparent; }
+.table-view .column-header-background { -fx-background-color: #555555; }
+.table-view .column-header-background .label { -fx-background-color: transparent; -fx-text-fill: #dddddd; -fx-font-weight: bold; }
+.table-view .column-header { -fx-background-color: transparent; }
+.table-view .table-cell { -fx-text-fill: #cccccc; -fx-alignment: center; }
+.table-row-cell { -fx-background-color: -fx-table-cell-border-color, #3a3a3a; -fx-background-insets: 0.0,0.0 0.0 1.0 0.0; -fx-padding: 0.0em; }
+.table-row-cell:odd { -fx-background-color: -fx-table-cell-border-color, #4a4a4a; -fx-background-insets: 0.0,0.0 0.0 1.0 0.0; -fx-padding: 0.0em; }
+.table-row-cell:selected { -fx-background-color: #888888; -fx-text-fill: #222222; }
+
+.radio-button{
+	-fx-text-fill: #cccccc;
+}
+/* ----------------------------
+   Context Menu
+---------------------------- */
+.context-menu { -fx-background-color: #3a3a3a; -fx-alignment: center; -fx-padding: 10.0; }
+.context-menu .menu-item:hover { -fx-background-color: #555555; -fx-text-fill: #ffffff; }
+.context-menu .menu-item:selected { -fx-background-color: #888888; -fx-text-fill: #222222; }
+
+/* ----------------------------
+   ComboBox
+---------------------------- */
+.combo-box { -fx-background-color: #3a3a3a; -fx-text-fill: #cccccc; }
+.combo-box .list-cell { -fx-background-color: #3a3a3a; -fx-text-fill: #cccccc; }
+.combo-box .list-cell:hover { -fx-background-color: #555555; -fx-text-fill: #ffffff; }
+.combo-box .list-cell:selected { -fx-background-color: #888888; -fx-text-fill: #222222; }
+
+/* ----------------------------
+   CheckBox
+---------------------------- */
+.check-box { -fx-text-fill: #cccccc; -fx-background-color: #3a3a3a; -fx-padding: 5.0 10.0 5.0 10.0; -fx-background-radius: 3.0; }
+.check-box:hover { -fx-background-color: #555555; }
+.check-box.selected .box { -fx-background-color: #888888; -fx-border-color: #555555; -fx-border-radius: 2.0; }
+.check-box .box { -fx-background-color: transparent; -fx-border-color: #555555; -fx-border-radius: 2.0; }
+
+/* ========================================
+   Monochrome TV XP Theme - Disk Card
+======================================== */
+.disk-card {
+    -fx-background-color: linear-gradient(to bottom, #2a2a2a, #4a4a4a); /* fundo cinza escuro */
+    -fx-background-radius: 6.0;
+    -fx-alignment: top-center;
+    -fx-spacing: 10.0;
+    -fx-padding: 12.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 6.0, 0.5, 2.0, 2.0);
+    -fx-border-color: #666666;
+    -fx-border-radius: 6.0;
+    -fx-border-width: 1.0;
+}
+
+.disk-card:hover {
+	-fx-background-color: #2a2a2a;
+}
+
+.disk-card .disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0.0,0.0,0.0,0.4), 4.0, 0.5, 1.0, 1.0);
+}
+
+.disk-card .subtitle {
+    -fx-fill: #cccccc;
+    -fx-font-weight: bold;
+    -fx-font-size: 13.0px;
+}
+
+.disk-card .info-label {
+    -fx-fill: #eeeeee;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.disk-card .info-value {
+    -fx-fill: #ffffff;
+    -fx-font-weight: normal;
+    -fx-font-size: 12.0px;
+}
+
+.disk-card .info-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 6.0;
+}
+
+.disk-card .progress-bar-total {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 12.0;
+    -fx-background-radius: 4.0;
+    -fx-border-radius: 4.0;
+    -fx-border-color: #666666;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .partition-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #7aaeff, #3a8ef7);
+    -fx-background-radius: 5.0;
+}
+
+.disk-card .partition-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 8.0;
+}
+
+.disk-card .partition-info {
+    -fx-spacing: 2.0;
+}
+
+.disk-card .usage-text {
+    -fx-fill: #9ed0ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+}
+
+.text-shortcut {
+    -fx-fill: #2e2e2e; /* cinza escuro */
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #4d4d4d; /* cinza médio */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #d0d0d0, #a0a0a0); /* gradiente cinza clássico */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+}
+
+.text-dontus-infor {
+    -fx-fill: #000000; /* preto */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #4d4d4d; /* cinza escuro */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #7a7a7a; /* cinza médio */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #b0b0b0; /* cinza claro */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ffffff; /* branco */
+}
+
+.text-field {
+    -fx-background-color: #7a7a7a; /* cinza médio */
+	-fx-text-fill: #4d4d4d; /* preto */
+    -fx-max-width: 300.0;
+    -fx-min-height: 30.0;
+}
+

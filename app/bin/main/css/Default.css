@@ -1,0 +1,549 @@
+/* Espaçamento do root (VBox, HBox, etc.) */
+.root {
+    -fx-spacing: 10.0; /* espaço entre elementos */
+    -fx-background-color: linear-gradient(
+        from 0.0% 0.0% to 100.0% 100.0%,
+        #f4ecec 0.0%,
+        #f2e4e4 45.0%,
+        #e3d1d1 100.0%
+    );
+}
+.linear-chart{
+	 -fx-background-color: transparent; 
+	 -fx-border-color: transparent;
+}
+
+.linear-node{
+	-fx-background-color: #817474;
+ 	-fx-stroke-line-cap: round;
+}
+
+.chart-plot-background{
+	-fx-background-color: #817474;
+}
+/* Scroll moderno global */
+.scroll-bar {
+    -fx-background-color: transparent; /* fundo transparente */
+    -fx-padding: 0.0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #B5530D;   /* cor do thumb */
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 5.0px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #FF6600; /* hover */
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-padding: 0.0;
+}
+
+.text-window-process-loadlabel{
+	-fx-text-fill: #ffffff; 
+	/*-fx-font-size: 24px; */
+	-fx-font-weight: bold;
+}
+.text-window-status-data{
+	
+	-fx-text-fill: #f56e35; 
+	-fx-font-weight: bold;
+	-fx-font-size: 16.0px;
+}
+
+.text-window-process-data{
+	
+	-fx-text-fill: #f56e35; 
+	-fx-font-weight: bold;
+	-fx-font-size: 16.0px;
+}
+
+.text-window-process-title{
+	-fx-fill: #f56e35; 
+	-fx-font-size: 26.0px; 
+	-fx-font-weight: bold;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 3.0px;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+   	-fx-background-color: #817474;
+}
+
+.chart-title {
+    -fx-font-weight: bold;      /* Negrito */
+    -fx-font-size: 14.0px;        /* Tamanho da fonte */
+    -fx-alignment: CENTER_LEFT; /* Alinha à esquerda */
+    -fx-padding: 0.0 0.0 0.0 10.0px;    /* Ajusta espaço à esquerda */
+}
+
+.infor-about {
+    -fx-fill: #B5530D;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.infor-about-link {
+    -fx-text-fill: #f56e35;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+.inner-circle-donut{
+	-fx-fill: #817474; 
+}
+
+.process-view{
+/*   -fx-min-width: 0;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+    -fx-max-width: 100%;
+    -fx-max-height: auto;
+   	-fx-border-color: black;
+	-fx-border-radius: 10;
+	-fx-border-width: 2px;
+    -fx-min-height: 0;*/
+    -fx-height: 100.0%;
+}
+
+.title{
+	-fx-fill: #B5530D;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.text-table-graphics-linear{
+	-fx-font-size: 12.0;
+}
+
+.nav-panel{
+	-fx-spacing: 20.0;  
+	-fx-alignment: center;
+	-fx-padding: 10.0; 
+}
+
+
+.menu-button{
+	-fx-background-color: #f56e35;
+	-fx-background-radius: 7.0;  
+	-fx-width: 30.0;
+	-fx-min-width: 40.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #632c15;
+}
+
+.nav-button{
+	-fx-background-color: #f56e35;
+	-fx-background-radius: 7.0;  
+	-fx-min-width: 100.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.nav-button:hover{
+	-fx-background-color: #632c15;
+}
+
+.nav-button-active {
+    -fx-background-color: #632c15;
+}
+
+.windowns-pops{
+	-fx-background-color: #817474;
+    -fx-padding: 10.0; /* top right bottom left */
+}
+
+.card{
+	-fx-background-color: #817474;
+	-fx-background-radius: 10.0;       /* cantos arredondados */
+	/*-fx-border-color: black;
+	-fx-border-radius: 10;
+	-fx-border-width: 2px; */
+	-fx-alignment: center;        /* centraliza horizontal e verticalmente */
+	-fx-spacing: 10.0;              /* espaço entre elementos do HBox */
+    -fx-padding: 10.0; /* top right bottom left */
+	/*-fx-min-height: 300;
+	-fx-max-width: 400;
+	-fx-min-width: 300;*/
+	-fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 8.0, 0.5, 2.0, 2.0); /*dropshadow(
+																			    tipo,         -> gaussian, one-pass-box ou dois-pass-box
+																			    cor,          -> rgba ou nome da cor
+																			    raio,         -> tamanho do desfoque
+																			    spread,       -> quanto a sombra se espalha (0.0 a 1.0)
+																			    offsetX,      -> deslocamento horizontal
+																			    offsetY       -> deslocamento vertical
+																			)*/
+	
+}
+
+.progress-bar {
+    -fx-pref-width: 220.0;   /* largura preferida */
+    -fx-pref-height: 10.0;   /* altura preferida */
+}
+
+.progress-bar > .track {
+    -fx-background-color: #e0e0e0;   /* cor do fundo */
+    -fx-background-radius: 10.0;       /* borda arredondada */
+    -fx-background-insets: 0.0;        /* margem interna */
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #F08B60, #f56e35); /* cor da barra preenchida */
+    -fx-background-radius: 10.0;    /* arredondamento igual ao da track */
+    -fx-background-insets: 0.0;     /* alinhar */
+}
+
+
+.card-dark-graphics {
+	-fx-background-color: #817474;
+	-fx-background-radius: 10.0;       /* cantos arredondados */
+	/*-fx-border-color: black;
+	-fx-border-radius: 10;
+	-fx-border-width: 2px; */
+	-fx-alignment: center;        /* centraliza horizontal e verticalmente */
+	-fx-spacing: 10.0;              /* espaço entre elementos do HBox */
+	
+    -fx-padding: 10.0 40.0 10.0 40.0; /* top right bottom left */
+	/*-fx-min-height: 300;
+	-fx-max-width: 400;
+	-fx-min-width: 300;*/
+	-fx-min-width: 150.0;
+	-fx-font-weight: bold;      /* Negrito */
+    -fx-font-size: 14.0px;        /* Tamanho da fonte */
+	-fx-fill: #B5530D;
+	-fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 8.0, 0.5, 2.0, 2.0); /*dropshadow(
+																		    tipo,         -> gaussian, one-pass-box ou dois-pass-box
+																		    cor,          -> rgba ou nome da cor
+																		    raio,         -> tamanho do desfoque
+																		    spread,       -> quanto a sombra se espalha (0.0 a 1.0)
+																		    offsetX,      -> deslocamento horizontal
+																		    offsetY       -> deslocamento vertical
+																		)*/
+}
+
+.box-layers-text{
+	-fx-alignment: center;  
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.box-layers-text2{
+	-fx-alignment: center;  
+	-fx-font-size: 10.0;
+	-fx-font-weight: bold;
+}
+.panel-card{
+	-fx-height: 200.0;
+	-fx-max-height: 300.0;
+	-fx-min-width: 150.0;
+	-fx-padding: 15.0;
+}
+
+/* Primeira fatia (free) */
+.default-color0.chart-pie {
+    -fx-pie-color: #FF8C00; /* Laranja */
+}
+
+/* Segunda fatia (used) */
+.default-color1.chart-pie {
+    -fx-pie-color: #FFD700; /* Amarelo */
+}
+
+/* Se tivesse mais fatias */
+.default-color2.chart-pie {
+    -fx-pie-color: #00BFFF; /* Azul */
+}
+
+.custom-table{
+    -fx-background-color: #272a33; /* cor de fundo do cabeçalho da tabela */
+}
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+/* Fundo do cabeçalho */
+.table-view .column-header-background {
+    -fx-background-color: #262626; /* cor antiga do cabeçalho */
+}
+
+/* Texto do cabeçalho */
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B5530D;  /* cor antiga do texto */
+    -fx-font-weight: bold;
+}
+
+/* Cabeçalho transparente (mantém só label colorido) */
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+/* Células da tabela */
+.table-view .table-cell {
+    -fx-text-fill: black;   /* texto padrão igual ao style antigo */
+    -fx-alignment: center;
+}
+
+/* Linhas pares */
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #817474; /* fundo antigo */
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+/* Linhas ímpares */
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #817474; /* mesmo fundo antigo */
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+/* Linha selecionada */
+.table-row-cell:selected {
+    -fx-background-color: #f56e35; /* cor antiga da linha selecionada */
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 1.0;
+    -fx-text-fill: black; /* igual ao style antigo */
+}
+
+.radio-button{
+	-fx-text-fill: #817474;
+}
+
+.context-menu{
+	-fx-background-color: #817474;
+    -fx-padding: 5.0;
+}
+
+/* Cor de destaque quando o mouse passa sobre um item */
+.context-menu .menu-item:hover {
+    -fx-background-color: #f56e35; /* cor de hover */
+    -fx-text-fill: black;           /* cor do texto do item */
+}
+
+.menu-item:focused {
+    -fx-background-color: #f56e35; /* azul padrão */
+}
+
+/* Cor de seleção do item (quando clicado ou selecionado via teclado) */
+.context-menu .menu-item:selected {
+    -fx-background-color: #632c15;
+    -fx-text-fill: black;
+}
+
+.combo-box {
+    -fx-background-color: #262626;   /* cor do fundo do combobox */
+    -fx-text-fill: #827575;         /* cor do texto */
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #262626;  /* fundo da lista */
+    -fx-text-fill: #827575;         /* cor das opções */
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #632c15;  /* hover */
+    -fx-text-fill: white;           /* texto no hover */
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #f56e35;  /* seleção */
+    -fx-text-fill: #262626;         /* texto selecionado */
+}
+
+.check-box {
+    -fx-text-fill: #827575;        /* Cor do texto */
+    -fx-background-color: #262626; /* Cor de fundo */
+    -fx-padding: 5.0 10.0 5.0 10.0;        /* Espaçamento interno */
+    -fx-background-radius: 5.0;      /* Bordas arredondadas */
+}
+
+.check-box:hover {
+    -fx-background-color: #333333; /* Fundo quando passa o mouse */
+}
+
+.check-box:selected .box {
+    -fx-background-color: #f56e35; /* Fundo da caixinha quando marcado */
+    -fx-border-color: #632c15;     /* Borda ao redor da caixinha */
+    -fx-border-radius: 3.0;
+}
+
+.check-box .box {
+    -fx-background-color: transparent; /* Fundo da caixinha quando não marcado */
+    -fx-border-color: #632c15;         /* Borda padrão */
+    -fx-border-radius: 3.0;
+}
+
+/* ========================================
+   Default Theme - Disk Card
+======================================== */
+
+/* Card principal do disco */
+.disk-card {
+    -fx-background-color: #817474; /* fundo do card */
+    -fx-background-radius: 10.0;
+    -fx-alignment: top-center;
+    -fx-spacing: 10.0;
+    -fx-padding: 12.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 8.0, 0.5, 2.0, 2.0);
+    -fx-border-radius: 10.0;
+    -fx-border-width: 1.0;
+    -fx-border-color: #5c5050; /* leve borda escura */
+}
+
+.disk-card:hover {
+	-fx-background-color: #2a2a3d;
+}
+/* Ícone do disco */
+.disk-card .disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0.0,0.0,0.0,0.3), 4.0, 0.5, 1.0, 1.0);
+}
+
+/* Texto de subtítulo */
+.disk-card .subtitle {
+    -fx-fill: #ff4500;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+/* Texto de labels de informação */
+.disk-card .info-label {
+    -fx-fill: #ffd700;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Texto de valores */
+.disk-card .info-value {
+    -fx-fill: #ffffff;
+    -fx-font-weight: normal;
+    -fx-font-size: 12.0px;
+}
+
+/* Caixa de informações do disco */
+.disk-card .info-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 6.0;
+}
+
+/* Barra de progresso geral */
+.disk-card .progress-bar-total {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 12.0; /* ajustada para consistência */
+    -fx-background-radius: 6.0;
+    -fx-border-radius: 6.0;
+    -fx-border-color: #5c5050;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .progress-bar-total > .bar {
+    -fx-background-color: linear-gradient(to right, #F08B60, #f56e35);
+    -fx-background-radius: 6.0;
+}
+
+/* Barra de progresso de partição */
+.disk-card .partition-bar {
+    -fx-pref-width: 180.0;
+    -fx-pref-height: 10.0;
+    -fx-background-radius: 5.0;
+    -fx-border-radius: 5.0;
+    -fx-border-color: #5c5050;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .partition-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #f0a070, #f56e35);
+    -fx-background-radius: 5.0;
+}
+
+/* Caixa de partições */
+.disk-card .partition-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 8.0;
+}
+
+/* Linha de partição individual */
+.disk-card .partition-info {
+    -fx-spacing: 2.0;
+}
+
+/* Texto de uso percentual */
+.disk-card .usage-text {
+    -fx-fill: #ff8c00;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Para colocar um ícone via ImageView */
+.disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+}
+
+.text-shortcut {
+    -fx-fill: #2e2e2e; /* cinza escuro padrão */
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #d0d0d0; /* cinza claro */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #e0e0e0, #f0f0f0); /* gradiente suave */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.2), 3.0, 0.5, 1.0, 1.0);
+}
+
+.text-dontus-infor {
+    -fx-fill: #000000; /* preto padrão */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #333333; /* cinza escuro */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #666666; /* cinza médio */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #999999; /* cinza claro */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ffffff; /* branco */
+}
+
+.text-field {
+    -fx-background-color: #f56e35; /* cinza médio */
+	-fx-text-fill: #666666; /* preto */
+    -fx-max-width: 300.0;
+    -fx-min-height: 30.0;
+}
+

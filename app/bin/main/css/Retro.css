@@ -1,0 +1,576 @@
+/* ============================= */
+/* Tema Retro JavaFX Organizado   */
+/* ============================= */
+
+/* ================= Root VBox / HBox ================= */
+.root {
+    -fx-spacing: 10.0;
+    -fx-background-color: linear-gradient(
+        from 0.0% 0.0% to 100.0% 100.0%,
+        #1b1b1b 0.0%,
+        #2e2e2e 50.0%,
+        #1b1b1b 100.0%
+    );
+}
+
+/* ================= Scroll moderno ================= */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0.0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #39ff14; /* verde neon */
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 5.0px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #ff6ec7; /* rosa neon */
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-padding: 0.0;
+}
+
+.infor-about  {
+    -fx-fill: #000080; /* azul retro */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.infor-about-link {
+    -fx-text-fill: #006400; /* azul retro */
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+
+/* ================= Labels e Text ================= */
+.text-window-process-loadlabel {
+    -fx-text-fill: #39ff14;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.text-window-status-data {
+    -fx-text-fill: #ff6ec7;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.text-window-process-data {
+    -fx-text-fill: #ff6ec7;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.text-window-process-title {
+    -fx-fill: #ffb86c;
+    -fx-font-size: 26.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.title {
+    -fx-fill: #39ff14;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.text-table-graphics-linear {
+    -fx-font-size: 12.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+/* ================= Charts ================= */
+.chart-series-line {
+    -fx-stroke-width: 3.0px;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+    -fx-background-color: #39ff14;
+}
+
+.chart-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0.0 0.0 0.0 10.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.inner-circle-donut {
+    -fx-fill: #2e2e2e;
+}
+
+.donut-inner-text {
+    -fx-text-fill: #39ff14;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+/* ================= Cards ================= */
+.card {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0;
+    -fx-effect: dropshadow(gaussian, rgba(57.0,255.0,20.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+.card-dark-graphics {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0 40.0 10.0 40.0;
+    -fx-min-width: 150.0px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-fill: #39ff14;
+    -fx-effect: dropshadow(gaussian, rgba(57.0,255.0,20.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+.linear-chart {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.linear-node {
+    -fx-background-color: #39ff14; /* verde neon */
+    -fx-stroke-line-cap: round;
+}
+
+.chart-plot-background{
+    -fx-background-color: #0D5753;
+}
+
+.panel-card {
+    -fx-height: 200.0px;
+    -fx-max-height: 300.0px;
+    -fx-min-width: 150.0px;
+    -fx-padding: 15.0;
+}
+
+/* ================= Windows / Popups ================= */
+.windowns-pops {
+    -fx-background-color: #2e2e2e;
+    -fx-padding: 10.0;
+}
+
+/* ================= Botões ================= */
+.nav-panel {
+    -fx-spacing: 20.0;
+    -fx-alignment: center;
+    -fx-padding: 10.0;
+}
+
+.menu-button{
+	-fx-background-color: #39ff14;
+	-fx-background-radius: 7.0;  
+	-fx-width: 30.0;
+	-fx-min-width: 40.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #ff6ec7;
+}
+
+.nav-button {
+    -fx-background-color: #39ff14;
+    -fx-background-radius: 7.0;
+    -fx-min-width: 100.0px;
+    -fx-min-height: 30.0px;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1b1b1b;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.nav-button:hover {
+    -fx-background-color: #ff6ec7;
+    -fx-text-fill: #1b1b1b;
+}
+
+.nav-button-active {
+    -fx-background-color: #ffb86c;
+    -fx-text-fill: #1b1b1b;
+}
+
+/* ================= ProgressBar ================= */
+.progress-bar {
+    -fx-pref-width: 220.0px;
+    -fx-pref-height: 10.0px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #1b1b1b;
+    -fx-background-radius: 10.0px;
+    -fx-background-insets: 0.0;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #39ff14, #ff6ec7);
+    -fx-background-radius: 10.0px;
+    -fx-background-insets: 0.0;
+}
+
+/* ================= Gráficos lineares ================= */
+.chart-linear {
+    -fx-pref-height: 150.0px;
+    -fx-min-height: 150.0px;
+    -fx-max-height: 150.0px;
+    -fx-background-color: transparent;
+}
+
+/* ================= Tabelas ================= */
+.custom-table {
+    -fx-background-color: #1b1b1b;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2e2e2e;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #39ff14;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #39ff14;
+    -fx-alignment: center;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #1b1b1b;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #2e2e2e;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ff6ec7;
+    -fx-text-fill: #1b1b1b;
+}
+
+/* ================= Context Menu ================= */
+.context-menu {
+    -fx-background-color: #2e2e2e;
+    -fx-padding: 8.0;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #39ff14;
+    -fx-text-fill: #1b1b1b;
+}
+
+.context-menu .menu-item:selected {
+    -fx-background-color: #ff6ec7;
+    -fx-text-fill: #1b1b1b;
+}
+
+.menu-item:focused {
+    -fx-background-color: #39ff14;
+}
+
+.radio-button{
+	-fx-text-fill: #39ff14;
+}
+/* ================= ComboBox ================= */
+
+
+.combo-box {
+    -fx-background-color: #1b1b1b;
+    -fx-text-fill: #39ff14;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #1b1b1b;
+    -fx-text-fill: #39ff14;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #ff6ec7;
+    -fx-text-fill: #1b1b1b;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #39ff14;
+    -fx-text-fill: #1b1b1b;
+}
+
+/* ================= CheckBox ================= */
+.check-box {
+    -fx-text-fill: #39ff14;
+    -fx-background-color: #1b1b1b;
+    -fx-padding: 4.0 8.0 4.0 8.0;
+    -fx-background-radius: 5.0;
+}
+
+.check-box:hover {
+    -fx-background-color: #2e2e2e;
+}
+
+.check-box.selected .box {
+    -fx-background-color: #39ff14;
+    -fx-border-color: #ff6ec7;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #39ff14;
+    -fx-border-radius: 3.0;
+}
+
+/* ================= Donut / Pie Colors ================= */
+.default-color0.chart-pie {
+    -fx-pie-color: #39ff14;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #ff6ec7;
+}
+
+.default-color2.chart-pie {
+    -fx-pie-color: #ffb86c;
+}
+
+/* ================= Textos Box Layers ================= */
+.box-layers-text {
+    -fx-alignment: center;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+.box-layers-text2 {
+    -fx-alignment: center;
+    -fx-font-size: 10.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+
+/* ========================================
+   Retro Theme - Disk Card
+======================================== */
+
+/* Card principal do disco */
+.disk-card {
+    -fx-background-color: linear-gradient(to bottom, #2e2e2e, #1b1b1b); /* fundo bege retro */
+    -fx-background-radius: 6.0;
+    -fx-alignment: top-center;
+    -fx-spacing: 10.0;
+    -fx-padding: 12.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0.0,0.0,0.0,0.3), 4.0, 0.5, 2.0, 2.0);
+    -fx-border-color: RGBA(57.0, 255.0, 20.0, 0.5); /* marrom retro */
+    -fx-border-radius: 6.0;
+    -fx-border-width: 1.0;
+}
+
+.disk-card:hover {
+	-fx-background-color: #2e2e2e;
+}
+
+/* Ícone do disco */
+.disk-card .disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0.0,0.0,0.0,0.2), 3.0, 0.5, 1.0, 1.0);
+}
+
+/* Texto de subtítulo (externo ou desconhecido) */
+.disk-card .subtitle {
+    -fx-fill: #8b0000; /* vermelho escuro clássico */
+    -fx-font-weight: bold;
+    -fx-font-size: 13.0px;
+}
+
+/* Texto de labels de informação */
+.disk-card .info-label {
+    -fx-fill: #000080; /* azul retro */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Texto de valores */
+.disk-card .info-value {
+    -fx-fill: #006400; /* verde escuro retro */
+    -fx-font-weight: normal;
+    -fx-font-size: 12.0px;
+}
+
+/* Caixa de informações do disco */
+.disk-card .info-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 6.0;
+}
+
+/* Barra de progresso geral */
+.disk-card .progress-bar-total {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 12.0;
+    -fx-background-radius: 4.0;
+    -fx-border-radius: 4.0;
+    -fx-border-color: #a0522d;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .progress-bar-total > .bar {
+    -fx-background-color: linear-gradient(to right, #ff4500, #ff8c00); /* laranja retro */
+    -fx-background-radius: 4.0;
+}
+
+/* Barra de progresso de partição */
+.disk-card .partition-bar {
+    -fx-pref-width: 180.0;
+    -fx-pref-height: 10.0;
+    -fx-background-radius: 3.0;
+    -fx-border-radius: 3.0;
+    -fx-border-color: #a0522d;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .partition-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #1e90ff, #00bfff); /* azul retro */
+    -fx-background-radius: 3.0;
+}
+
+/* Caixa de partições */
+.disk-card .partition-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 8.0;
+}
+
+/* Linha de partição individual */
+.disk-card .partition-info {
+    -fx-spacing: 2.0;
+}
+
+/* Texto de uso percentual */
+.disk-card .usage-text {
+    -fx-fill: #8b0000; /* vermelho escuro retro */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Para colocar um ícone via ImageView */
+.disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+}
+
+.text-shortcut {
+    -fx-fill: #ff5f1f; /* laranja neon */
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #1f1f2e; /* fundo escuro retro */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+    -fx-border-color: #ff5f1f;
+    -fx-border-width: 1.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #2e003e, #72005f); /* gradiente roxo/vinho retro */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+    -fx-effect: dropshadow(gaussian, rgba(255.0,95.0,31.0,0.6), 5.0, 0.5, 1.0, 1.0);
+}
+
+.text-dontus-infor {
+    -fx-fill: #00ffff; /* ciano neon */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #ff00ff; /* magenta neon */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #ffff00; /* amarelo neon */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #ff5f1f; /* laranja neon */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ffffff; /* branco para contraste */
+}
+
+.text-shortcut {
+    -fx-fill: #ff5f1f; /* laranja neon */
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #1f1f2e; /* fundo escuro retro */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+    -fx-border-color: #ff5f1f;
+    -fx-border-width: 1.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #2e003e, #72005f); /* gradiente roxo/vinho retro */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+    -fx-effect: dropshadow(gaussian, rgba(255.0,95.0,31.0,0.6), 5.0, 0.5, 1.0, 1.0);
+}
+
+.text-dontus-infor {
+    -fx-fill: #00ffff; /* ciano neon */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #ff00ff; /* magenta neon */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #ffff00; /* amarelo neon */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #ff5f1f; /* laranja neon */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ffffff; /* branco para contraste */
+}
+
+.text-field {
+    -fx-background-color: #39ff14; /* cinza médio */
+    -fx-text-fill: #1f1f2e; /* preto */
+    -fx-max-width: 300.0;
+    -fx-min-height: 30.0;
+}
+

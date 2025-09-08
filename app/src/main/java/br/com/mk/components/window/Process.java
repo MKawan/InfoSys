@@ -47,7 +47,9 @@ public class Process extends VBox {
 		originalList = FXCollections.observableArrayList();
 		table.setItems(data);
 		table.setPlaceholder(new Label("Wait..."));
-
+		table.setMaxWidth(Double.MAX_VALUE);
+		table.setMaxHeight(Double.MAX_VALUE); // <- permite crescer na vertical
+		
 		searchField = new TextField();
 		searchField.setPromptText("Search process...");
 

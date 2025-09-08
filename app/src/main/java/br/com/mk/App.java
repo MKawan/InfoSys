@@ -49,36 +49,57 @@ public class App extends Application {
         navPanel.updateActiveButton("Recourses");
 
         // Listener de troca de ambiente (cria instâncias apenas quando necessário)
-        navPanel.setOnNavChangeListener(env -> {
-            contentContainer.getChildren().clear();
+		navPanel.setOnNavChangeListener(env -> {
+		    // Limpa o conteúdo anterior
+		    contentContainer.getChildren().clear();
+		
+		    switch (env) {
+		        case "Process" -> {
+		            scrollPane.setFitToHeight(true);
+		
+				if (processPanel == null) {
+		                processPanel = new Process();
+		            }
+		
+		            // Faz o painel Process ocupar toda a altura disponível
+		            VBox.setVgrow(processPanel, Priority.ALWAYS);
+		            processPanel.setMaxHeight(Double.MAX_VALUE);
+		
+		            contentContainer.getChildren().add(processPanel);
+		        }
+		
+		        case "Recourses" -> {
+		            scrollPane.setFitToHeight(false);
+		
+		            if (recoursesPanel == null) {
+		                recoursesPanel = new Recourses();
+		            }
+		
+		            // Recourses não cresce verticalmente
+		            VBox.setVgrow(recoursesPanel, Priority.NEVER);
+		
+		            contentContainer.getChildren().add(recoursesPanel);
+		        }
+		
+		        case "Files System" -> {
+		            scrollPane.setFitToHeight(true);
+		
+		            if (filesSystemPanel == null) {
+		                filesSystemPanel = new FilesSystem();
+		            }
+		
+		            // Faz o painel FilesSystem crescer verticalmente
+		            VBox.setVgrow(filesSystemPanel, Priority.ALWAYS);
+		            filesSystemPanel.setMaxHeight(Double.MAX_VALUE);
+		
+		            contentContainer.getChildren().add(filesSystemPanel);
+		        }
+		    }
 
-            switch (env) {
-                case "Process" -> {
-                    scrollPane.setFitToHeight(true);
-                    if (processPanel == null) {
-                        processPanel = new Process();
-                    }
-                    contentContainer.getChildren().add(processPanel);
-                    VBox.setVgrow(contentContainer, Priority.ALWAYS);
-                }
-                case "Recourses" -> {
-                    scrollPane.setFitToHeight(false);
-                    if (recoursesPanel == null) {
-                        recoursesPanel = new Recourses();
-                    }
-                    contentContainer.getChildren().add(recoursesPanel);
-                }
-                case "Files System" -> {
-                    scrollPane.setFitToHeight(true);
-                    if (filesSystemPanel == null) {
-                        filesSystemPanel = new FilesSystem();
-                    }
-                    contentContainer.getChildren().add(filesSystemPanel);
-                }
-            }
+    // Atualiza destaque dos botões
+    navPanel.updateActiveButton(env);
+});
 
-            navPanel.updateActiveButton(env);
-        });
 
         VBox.setVgrow(contentContainer, Priority.ALWAYS);
         root.getChildren().addAll(navPanel, contentContainer);
