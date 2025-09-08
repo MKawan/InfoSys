@@ -1,0 +1,605 @@
+/* ========================================
+   Bespin Theme - Full UI (Compatível Retro)
+======================================== */
+
+/* ================================
+   Root e Fundo Principal
+================================ */
+.root {
+    -fx-spacing: 10.0; /* Espaçamento padrão VBox/HBox */
+    -fx-background-color: linear-gradient(to bottom, #1f1f2e, #3a3a50); /* Fundo azul escuro */
+}
+
+
+.infor-about {
+    -fx-fill: #c2c2ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0;
+}
+
+.infor-about-link {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0;
+}
+/* ================================
+   Disk Card (Cartão de Disco)
+================================ */
+.disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+}
+
+.disk-card {
+    -fx-background-color: linear-gradient(to bottom, #2a2a3d, #4e4e6b);
+    -fx-background-radius: 12.0;
+    -fx-alignment: top-center;
+    -fx-spacing: 10.0;
+    -fx-padding: 12.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 10.0, 0.6, 0.0, 0.0);
+    -fx-border-radius: 12.0;
+    -fx-border-width: 1.0;
+    -fx-border-color: #5c5ca3;
+}
+
+.disk-card:hover {
+	-fx-background-color: #2a2a3d;
+}
+
+.disk-card .disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(92.0,92.0,163.0,0.7), 8.0, 0.5, 0.0, 0.0);
+}
+
+.disk-card .subtitle {
+    -fx-fill: #9ed0ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+.disk-card .info-label {
+    -fx-fill: #c2c2ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.disk-card .info-value {
+    -fx-fill: #ffffff;
+    -fx-font-weight: normal;
+    -fx-font-size: 12.0px;
+}
+
+.disk-card .info-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 6.0;
+}
+
+.disk-card .progress-bar-total {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 12.0;
+    -fx-background-radius: 6.0;
+    -fx-border-radius: 6.0;
+    -fx-border-color: #5c5ca3;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .progress-bar-total > .bar {
+    -fx-background-color: linear-gradient(to right, #3a8ef7, #5c5ca3);
+    -fx-background-radius: 6.0;
+}
+
+.disk-card .partition-bar {
+    -fx-pref-width: 180.0;
+    -fx-pref-height: 10.0;
+    -fx-background-radius: 5.0;
+    -fx-border-radius: 5.0;
+    -fx-border-color: #5c5ca3;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .partition-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #7aaeff, #3a8ef7);
+    -fx-background-radius: 5.0;
+}
+
+.disk-card .partition-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 8.0;
+}
+
+.disk-card .partition-info {
+    -fx-spacing: 2.0;
+}
+
+.disk-card .usage-text {
+    -fx-fill: #9ed0ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+
+/* ================================
+   ScrollBar Bespin
+================================ */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0.0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #5c5ca3;
+    -fx-background-radius: 5.0px;
+    -fx-background-insets: 0.0;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #9ed0ff;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-padding: 0.0;
+}
+
+/* ================================
+   NavPanel e Buttons
+================================ */
+.nav-panel {
+    -fx-spacing: 20.0;
+    -fx-alignment: center;
+    -fx-padding: 10.0;
+}
+
+.menu-button{
+	-fx-background-color: #5c5ca3;
+	-fx-background-radius: 7.0;  
+	-fx-width: 30.0;
+	-fx-min-width: 40.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #9ed0ff;
+}
+
+.nav-button {
+    -fx-background-color: #5c5ca3;
+    -fx-background-radius: 8.0;
+    -fx-min-width: 100.0;
+    -fx-min-height: 30.0;
+    -fx-font-size: 15.0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-button:hover {
+    -fx-background-color: #9ed0ff;
+    -fx-text-fill: #1f1f2e;
+}
+
+.nav-button-active {
+    -fx-background-color: #9ed0ff;
+    -fx-text-fill: #1f1f2e;
+}
+
+.radio-button {
+    -fx-text-fill: #c2c2ff;
+}
+
+/* ================================
+   ComboBox Bespin
+================================ */
+.combo-box {
+    -fx-background-color: #2a2a3d;
+    -fx-text-fill: #c2c2ff;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2a2a3d;
+    -fx-text-fill: #9ed0ff;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #5c5ca3;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #3a8ef7;
+    -fx-text-fill: #ffffff;
+}
+
+/* ================================
+   CheckBox Bespin
+================================ */
+
+.check-box {
+    -fx-text-fill: #c2c2ff;
+    -fx-background-color: #2a2a3d;
+    -fx-padding: 5.0 10.0 5.0 10.0;
+    -fx-background-radius: 5.0;
+}
+
+.check-box:hover {
+    -fx-background-color: #3a3a50;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #5c5ca3;
+    -fx-border-radius: 3.0;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #3a8ef7;
+    -fx-border-color: #5c5ca3;
+}
+
+/* ================================
+   Textos Bespin
+================================ */
+.text-window-process-loadlabel {
+    -fx-text-fill: #9ed0ff;
+    -fx-font-weight: bold;
+}
+
+.text-window-status-data,
+.text-window-process-data {
+    -fx-text-fill: #5c5ca3;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+}
+
+.text-window-process-title {
+    -fx-fill: #9ed0ff;
+    -fx-font-size: 26.0px;
+    -fx-font-weight: bold;
+}
+
+/* ================================
+   Cards Internos e Popups
+================================ */
+.windowns-pops {
+    -fx-background-color: #2a2a3d;
+    -fx-padding: 10.0;
+}
+
+.card {
+    -fx-background-color: #2a2a3d;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0;
+    -fx-effect: dropshadow(gaussian, rgba(158.0,208.0,255.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+.card-dark-graphics {
+    -fx-background-color: #2a2a3d;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0 40.0 10.0 40.0;
+    -fx-min-width: 150.0;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-fill: #5c5ca3;
+    -fx-effect: dropshadow(gaussian, rgba(92.0,92.0,163.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+/* ================================
+   Tabelas
+================================ */
+.custom-table {
+    -fx-background-color: #2a2a3d;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3a3a50;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9ed0ff;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #5c5ca3;
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #2a2a3d;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #3a3a50;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3a8ef7;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 1.0;
+    -fx-text-fill: #ffffff;
+}
+
+/* ================================
+   Context Menu Bespin
+================================ */
+.context-menu {
+    -fx-background-color: #817474;
+    -fx-padding: 5.0;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #5c5ca3;
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item:focused {
+    -fx-background-color: #3a8ef7;
+}
+
+.context-menu .menu-item:selected {
+    -fx-background-color: #3a8ef7;
+    -fx-text-fill: #ffffff;
+}
+
+/* ================================
+   Shortcuts e Donuts
+================================ */
+.text-shortcut {
+    -fx-fill: #9ed0ff;
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #5c5ca3;
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #2a2a3d, #4e4e6b);
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+}
+
+.text-dontus-infor {
+    -fx-fill: #ff70d0;
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #3a8ef7;
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #7aaeff;
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #267D64;
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ff2d95;
+}
+
+/* ================================
+   Gráficos Lineares Bespin (Faltantes)
+================================ */
+
+/* Chart Linear */
+.chart-linear {
+    -fx-pref-height: 150.0px;
+    -fx-min-height: 150.0px;
+    -fx-max-height: 150.0px;
+    -fx-background-color: transparent;
+}
+
+/* Series de linhas do gráfico */
+.chart-series-line {
+    -fx-stroke-width: 3.0px;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+    -fx-background-color: #9ed0ff; /* cor Bespin */
+}
+
+/* Nó linear do gráfico */
+.linear-node {
+    -fx-background-color: #9ed0ff;
+    -fx-stroke-line-cap: round;
+}
+
+/* Fundo do gráfico */
+.chart-plot-background {
+    -fx-background-color: #2a2a3d;
+}
+
+/* ================================
+   Cards e Painéis Internos Bespin
+================================ */
+
+/* Painel interno de cards */
+.panel-card {
+    -fx-height: 200.0px;
+    -fx-max-height: 300.0px;
+    -fx-min-width: 150.0px;
+    -fx-padding: 15.0;
+    -fx-background-color: #2a2a3d;
+    -fx-background-radius: 10.0;
+}
+
+/* Textos internos de tabelas gráficas */
+.text-table-graphics-linear {
+    -fx-font-size: 12.0px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #9ed0ff;
+}
+
+/* Boxes de camadas de texto */
+.box-layers-text {
+    -fx-alignment: center;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #9ed0ff;
+}
+
+.box-layers-text2 {
+    -fx-alignment: center;
+    -fx-font-size: 10.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #5c5ca3;
+}
+
+/* ================================
+   Donut / Pie Charts Bespin
+================================ */
+
+/* Círculo interno do Donut */
+.inner-circle-donut {
+    -fx-fill: #2a2a3d; /* fundo Bespin */
+}
+
+/* Texto dentro do Donut */
+.donut-inner-text {
+    -fx-text-fill: #9ed0ff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-font-family: "Courier New", monospace;
+}
+
+/* Cores dos slices do Donut */
+.default-color0.chart-pie {
+    -fx-pie-color: #9ed0ff;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #5c5ca3;
+}
+
+.default-color2.chart-pie {
+    -fx-pie-color: #3a8ef7;
+}
+
+/* Textos adicionais / info do Donut */
+.text-dontus-infor {
+    -fx-fill: #ff70d0; /* rosa neon Bespin */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #3a8ef7; /* azul Bespin */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #7aaeff; /* azul mais claro Bespin */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #267D64; /* verde escuro Bespin */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ff2d95; /* rosa neon Bespin*/
+}
+
+.text-field {
+    -fx-background-color: #ff2d95; /* cinza médio */
+	-fx-text-fill: #3a8ef7; /* preto */
+    -fx-max-width: 300.0;
+    -fx-min-height: 30.0;
+}
+
+/* ================================
+   Box Layers Text - Bespin
+================================ */
+
+.box-layers-text {
+    -fx-alignment: center;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #9ed0ff; /* cor principal do Bespin */
+}
+
+.box-layers-text2 {
+    -fx-alignment: center;
+    -fx-font-size: 10.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #5c5ca3; /* cor secundária do Bespin */
+}
+
+/* ================================
+   ProgressBar Interna Bespin
+================================ */
+.progress-bar > .track {
+    -fx-background-color: #3a3a50; /* fundo do track em tom escuro Bespin */
+    -fx-background-radius: 6.0;
+    -fx-background-insets: 0.0;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #3a8ef7, #5c5ca3); /* gradiente Bespin */
+    -fx-background-radius: 6.0;
+    -fx-background-insets: 0.0;
+}
+
+/* ================================
+   Linear Chart / Gráfico Interno Bespin
+================================ */
+.linear-chart {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-height: 150.0px;
+    -fx-min-height: 150.0px;
+    -fx-max-height: 150.0px;
+}
+
+/* ================================
+   Chart Title Bespin
+================================ */
+.chart-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0.0 0.0 0.0 10.0px;
+    -fx-font-family: "Courier New", monospace;
+    -fx-text-fill: #9ed0ff; /* cor principal do Bespin */
+}
+
+/* ================================
+   Títulos gerais Bespin
+================================ */
+.title {
+    -fx-fill: #9ed0ff;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Courier New", monospace;
+}
+

@@ -1,0 +1,30 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+.gradle/
+
+# Ignore build output
+/build/
+/app/build/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# VS Code
+.vscode/
+
+# Arquivos de logs
+*.log
+
+# Arquivos temporários
+*.tmp
+

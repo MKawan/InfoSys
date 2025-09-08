@@ -1,0 +1,44 @@
+1️⃣ Layout e posicionamento
+Propriedade	Descrição
+-fx-alignment	Alinhamento do conteúdo (equivalente a Pos no código). Valores: center, top-left, bottom-right, etc.
+-fx-padding	Espaçamento interno (top, right, bottom, left). Ex: 10 15 10 15
+-fx-spacing	Espaçamento entre filhos em HBox/VBox.
+-fx-margin	Margem de um Node em containers (HBox, VBox).
+-fx-pref-width / -fx-pref-height	Largura/altura preferida do Node.
+-fx-min-width / -fx-min-height	Largura/altura mínima.
+-fx-max-width / -fx-max-height	Largura/altura máxima.
+2️⃣ Cores e fundos
+Propriedade	Descrição
+-fx-background-color	Cor de fundo ou gradiente do Node.
+-fx-background-radius	Raio das bordas do fundo (arredondamento).
+-fx-border-color	Cor da borda.
+-fx-border-width	Largura da borda.
+-fx-border-radius	Raio das bordas da borda.
+-fx-opacity	Transparência do Node (0 a 1).
+3️⃣ Texto e fontes
+Propriedade	Descrição
+-fx-font-family	Fonte do texto. Ex: Arial, Verdana.
+-fx-font-size	Tamanho da fonte. Ex: 16px.
+-fx-font-weight	Peso da fonte. Ex: bold, normal.
+-fx-text-fill	Cor do texto.
+-fx-text-alignment	Alinhamento do texto. Valores: left, center, right, justify.
+-fx-wrap-text	Quebrar linha automática em Label/Text. Valores: true ou false.
+4️⃣ Bordas e sombras
+Propriedade	Descrição
+-fx-effect	Aplicar efeito, ex: dropshadow, blur.
+-fx-background-insets	Define inset do background.
+-fx-border-insets	Define inset da borda.
+5️⃣ Cursor e interações
+Propriedade	Descrição
+-fx-cursor	Tipo de cursor. Ex: hand, crosshair, default.
+-fx-focus-color	Cor do foco (quando Node selecionado).
+-fx-faint-focus-color	Cor fraca do foco.
+6️⃣ Shapes (Círculo, Rectangle, etc.)
+Propriedade	Descrição
+-fx-fill	Cor de preenchimento do Shape.
+-fx-stroke	Cor da borda do Shape.
+-fx-stroke-width	Largura da borda do Shape.
+
+💡 Dica: Nem todas as propriedades de layout podem ser controladas via CSS (como HBox.setHgrow). Algumas só funcionam via código. Mas para cores, bordas, fontes e alinhamento, o CSS do JavaFX é bastante poderoso.
+
+Se você quiser, posso te criar um CSS completo para seu CpuCard + DonutChart, incluindo cores, alinhamento central e responsividade.

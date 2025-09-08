@@ -1,0 +1,517 @@
+/* ============================= */
+/* Tema Dracula JavaFX Organizado */
+/* ============================= */
+
+/* ================= Root VBox / HBox ================= */
+.root {
+    -fx-spacing: 10.0;
+    -fx-background-color: linear-gradient(
+        from 0.0% 0.0% to 100.0% 100.0%,
+        #282a36 0.0%,
+        #2c2f41 50.0%,
+        #21222c 100.0%
+    );
+}
+
+/* ================= Scroll moderno ================= */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-padding: 0.0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #6272a4;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 5.0px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #ff79c6;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+    -fx-padding: 0.0;
+}
+
+/* ================= Labels e Text ================= */
+.text-window-process-loadlabel {
+    -fx-text-fill: #f8f8f2;
+    -fx-font-weight: bold;
+}
+
+.text-window-status-data {
+    -fx-text-fill: #ff79c6;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+}
+
+.text-window-process-data {
+    -fx-text-fill: #ff79c6;
+    -fx-font-weight: bold;
+    -fx-font-size: 16.0px;
+}
+
+.text-window-process-title {
+    -fx-fill: #ffb86c;
+    -fx-font-size: 26.0px;
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-fill: #ffb86c;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+}
+
+.text-table-graphics-linear {
+    -fx-font-size: 12.0px;
+}
+
+/* ================= Charts ================= */
+.chart-series-line {
+    -fx-stroke-width: 3.0px;
+    -fx-stroke-line-cap: round;
+    -fx-stroke-line-join: round;
+    -fx-background-color: #6272a4;
+}
+
+.chart-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0.0 0.0 0.0 10.0px;
+}
+
+.inner-circle-donut {
+    -fx-fill: #44475a;
+}
+
+.donut-inner-text {
+    -fx-text-fill: #f8f8f2;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+/* ================= Cards ================= */
+.card {
+    -fx-background-color: #44475a;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+.card-dark-graphics {
+    -fx-background-color: #44475a;
+    -fx-background-radius: 10.0;
+    -fx-alignment: center;
+    -fx-spacing: 10.0;
+    -fx-padding: 10.0 40.0 10.0 40.0;
+    -fx-min-width: 150.0px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+    -fx-fill: #ffb86c;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.5), 8.0, 0.5, 2.0, 2.0);
+}
+
+.linear-chart {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.linear-node {
+    -fx-background-color: #6272a4; /* azul acinzentado */
+    -fx-stroke-line-cap: round;
+}
+
+.chart-plot-background{
+	-fx-background-color: #282a36;
+}
+
+.panel-card {
+    -fx-height: 200.0px;
+    -fx-max-height: 300.0px;
+    -fx-min-width: 150.0px;
+    -fx-padding: 15.0;
+}
+
+/* ================= Windows / Popups ================= */
+.windowns-pops {
+    -fx-background-color: #44475a;
+    -fx-padding: 10.0;
+}
+
+/* ================= Botões ================= */
+
+.menu-button{
+	-fx-background-color: #6272a4;
+	-fx-background-radius: 7.0;  
+	-fx-width: 30.0;
+	-fx-min-width: 40.0;
+	-fx-min-height: 30.0;
+	-fx-font-size: 15.0;
+	-fx-font-weight: bold;
+}
+
+.menu-button:hover{
+	-fx-background-color: #ff79c6;
+}
+
+.nav-panel {
+    -fx-spacing: 20.0;
+    -fx-alignment: center;
+    -fx-padding: 10.0;
+}
+
+.nav-button {
+    -fx-background-color: #6272a4;
+    -fx-background-radius: 7.0;
+    -fx-min-width: 100.0px;
+    -fx-min-height: 30.0px;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f8f8f2;
+}
+
+.nav-button:hover {
+    -fx-background-color: #ff79c6;
+}
+
+.nav-button-active {
+    -fx-background-color: #ffb86c;
+    -fx-text-fill: #282a36;
+}
+
+/* ================= ProgressBar ================= */
+.progress-bar {
+    -fx-pref-width: 220.0px;
+    -fx-pref-height: 10.0px;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #21222c;
+    -fx-background-radius: 10.0px;
+    -fx-background-insets: 0.0;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #ffb86c, #ff79c6);
+    -fx-background-radius: 10.0px;
+    -fx-background-insets: 0.0;
+}
+
+/* ================= Gráficos lineares ================= */
+.chart-linear {
+    -fx-pref-height: 150.0px;
+    -fx-min-height: 150.0px;
+    -fx-max-height: 150.0px;
+    -fx-background-color: transparent;
+}
+
+/* ================= Tabelas ================= */
+.custom-table {
+    -fx-background-color: #282a36;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #44475a;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffb86c;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #f8f8f2;
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-table-cell-border-color, #282a36;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: -fx-table-cell-border-color, #21222c;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #ff79c6;
+    -fx-text-fill: #282a36;
+}
+
+/* ================= Context Menu ================= */
+.context-menu {
+    -fx-background-color: #44475a;
+    -fx-padding: 8.0;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: #6272a4;
+    -fx-text-fill: #f8f8f2;
+}
+
+.context-menu .menu-item:selected {
+    -fx-background-color: #ff79c6;
+    -fx-text-fill: #282a36;
+}
+
+.menu-item:focused {
+    -fx-background-color: #6272a4;
+}
+
+/* ================= ComboBox ================= */
+.combo-box {
+    -fx-background-color: #282a36;
+    -fx-text-fill: #f8f8f2;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #282a36;
+    -fx-text-fill: #f8f8f2;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #6272a4;
+    -fx-text-fill: #f8f8f2;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #ff79c6;
+    -fx-text-fill: #282a36;
+}
+
+/* ================= CheckBox ================= */
+.radio-button{
+	-fx-text-fill: #f8f8f2;
+}
+
+.check-box {
+    -fx-text-fill: #f8f8f2;
+    -fx-background-color: #282a36;
+    -fx-padding: 4.0 8.0 4.0 8.0;
+    -fx-background-radius: 5.0;
+}
+
+.check-box:hover {
+    -fx-background-color: #333333;
+}
+
+.check-box .selected .box {
+    -fx-background-color: #ff79c6;
+    -fx-border-color: #6272a4;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+    -fx-border-color: #6272a4;
+    -fx-border-radius: 3.0;
+}
+
+/* ================= Donut / Pie Colors ================= */
+.default-color0.chart-pie {
+    -fx-pie-color: #ffb86c;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #ff79c6;
+}
+
+
+.default-color2.chart-pie {
+    -fx-pie-color: #8be9fd;
+}
+
+/* ================= Textos Box Layers ================= */
+.box-layers-text {
+    -fx-alignment: center;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bold;
+}
+
+.box-layers-text2 {
+    -fx-alignment: center;
+    -fx-font-size: 10.0px;
+    -fx-font-weight: bold;
+}
+
+.infor-about {
+    -fx-fill: #f8f8f2; /* branco suave */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+.infor-about-link {
+    -fx-text-fill: #50fa7b; /* branco suave */
+    -fx-font-weight: bold;
+    -fx-font-size: 14.0px;
+}
+
+
+/* ========================================
+   Dracula Theme - Disk Card
+======================================== */
+
+/* Card principal do disco */
+.disk-card {
+    -fx-background-color: linear-gradient(to bottom, #282a36, #44475a); /* fundo escuro */
+    -fx-background-radius: 6.0;
+    -fx-alignment: top-center;
+    -fx-spacing: 10.0;
+    -fx-padding: 12.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0,0.0,0.0,0.6), 6.0, 0.5, 2.0, 2.0);
+    -fx-border-color: #6272a4; /* borda roxa escura */
+    -fx-border-radius: 6.0;
+    -fx-border-width: 1.0;
+}
+
+.disk-card:hover {
+	-fx-background-color: #282a36;
+}
+
+/* Ícone do disco */
+.disk-card .disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0.0,0.0,0.0,0.4), 4.0, 0.5, 1.0, 1.0);
+}
+
+/* Texto de subtítulo (externo ou desconhecido) */
+.disk-card .subtitle {
+    -fx-fill: #ff79c6; /* rosa neon Dracula */
+    -fx-font-weight: bold;
+    -fx-font-size: 13.0px;
+}
+
+/* Texto de labels de informação */
+.disk-card .info-label {
+    -fx-fill: #f8f8f2; /* branco suave */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Texto de valores */
+.disk-card .info-value {
+    -fx-fill: #50fa7b; /* verde neon Dracula */
+    -fx-font-weight: normal;
+    -fx-font-size: 12.0px;
+}
+
+/* Caixa de informações do disco */
+.disk-card .info-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 6.0;
+}
+
+/* Barra de progresso geral */
+.disk-card .progress-bar-total {
+    -fx-pref-width: 220.0;
+    -fx-pref-height: 12.0;
+    -fx-background-radius: 4.0;
+    -fx-border-radius: 4.0;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .progress-bar-total > .bar {
+    -fx-background-color: linear-gradient(to right, #ff79c6, #bd93f9); /* rosa -> roxo neon */
+    -fx-background-radius: 4.0;
+}
+
+/* Barra de progresso de partição */
+.disk-card .partition-bar {
+    -fx-pref-width: 180.0;
+    -fx-pref-height: 10.0;
+    -fx-background-radius: 3.0;
+    -fx-border-radius: 3.0;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 1.0;
+}
+
+.disk-card .partition-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #8be9fd, #50fa7b); /* azul -> verde neon */
+    -fx-background-radius: 3.0;
+}
+
+/* Caixa de partições */
+.disk-card .partition-box {
+    -fx-alignment: top-left;
+    -fx-spacing: 8.0;
+}
+
+/* Linha de partição individual */
+.disk-card .partition-info {
+    -fx-spacing: 2.0;
+}
+
+/* Texto de uso percentual */
+.disk-card .usage-text {
+    -fx-fill: #ffb86c; /* laranja neon */
+    -fx-font-weight: bold;
+    -fx-font-size: 12.0px;
+}
+
+/* Para colocar um ícone via ImageView */
+.disk-icon {
+    -fx-fit-width: 150.0;
+    -fx-fit-height: 150.0;
+}
+
+.text-shortcut {
+    -fx-fill: #f8f8f2; /* branco suave Dracula */
+    -fx-font-size: 18.0px;
+}
+
+.card-shortcut-title {
+    -fx-background-color: #6272a4; /* roxo acinzentado Dracula */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 120.0;
+}
+
+.card-shortcut {
+    -fx-background-color: linear-gradient(to bottom, #44475a, #282a36); /* gradiente escuro Dracula */
+    -fx-padding: 5.0 10.0;
+    -fx-background-radius: 4.0;
+    -fx-min-width: 50.0;
+}
+
+.text-dontus-infor {
+    -fx-fill: #ff79c6; /* rosa neon Dracula */
+}
+
+.text-dontus-infor2 {
+    -fx-fill: #8be9fd; /* azul neon Dracula */
+}
+
+.text-dontus-infor3 {
+    -fx-fill: #50fa7b; /* verde neon Dracula */
+}
+
+.text-dontus-infor-swap {
+    -fx-fill: #f1fa8c; /* amarelo neon Dracula */
+}
+
+.text-dontus-infor-swap2 {
+    -fx-fill: #ffb86c; /* laranja neon Dracula */
+}
+
+.text-field {
+    -fx-background-color: #44475a; /* cinza médio */
+    -fx-text-fill: #50fa7b; /* preto */
+    -fx-max-width: 300.0;
+    -fx-min-height: 30.0;
+}
