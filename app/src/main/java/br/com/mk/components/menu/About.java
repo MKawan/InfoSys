@@ -46,7 +46,7 @@ public class About extends Stage {
 
 		Label link = new Label("GitHub");
 		link.setOnMouseClicked(e -> {
-			Help.openLink("https://github.com/MKawan/System_Monitor");
+			Help.openLink("https://github.com/MKawan/InfoSys");
 		});
 		link.getStyleClass().add("infor-about-link");
 

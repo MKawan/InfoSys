@@ -14,139 +14,108 @@ import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class App extends Application {
 
-    // Instâncias globais, mas inicializadas sob demanda
-    private Process processPanel;
-    private Recourses recoursesPanel;
-    private FilesSystem filesSystemPanel;
+	@Override
+	public void start(Stage stage) {
+		VBox root = new VBox();
+		root.getStyleClass().add("root");
 
-    @Override
-    public void start(Stage stage) {
-        VBox root = new VBox();
-        root.getStyleClass().add("root");
+		// Coloca o VBox dentro de um ScrollPane
+		ScrollPane scrollPane = new ScrollPane(root);
+		scrollPane.setFitToWidth(true);
+		scrollPane.setFitToHeight(false);
+		scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+		scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
-        ScrollPane scrollPane = new ScrollPane(root);
-        scrollPane.setFitToWidth(true);
-        scrollPane.setFitToHeight(false);
-        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
-        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
-        // Painel de navegação
-        NavPanel navPanel = new NavPanel(null); // Passa null por enquanto
+		Process process = new Process();
+		Recourses recourses = new Recourses();
+		FilesSystem filesSystem = new FilesSystem();
 
-        // Container para trocar os ambientes
-        VBox contentContainer = new VBox();
-        contentContainer.setSpacing(10);
+		// Painel de navegação
+		NavPanel navPanel = new NavPanel(process);
 
-        // Inicializa painel Recourses por padrão, sob demanda
-        recoursesPanel = new Recourses();
-        contentContainer.getChildren().add(recoursesPanel);
-        navPanel.updateActiveButton("Recourses");
+		// Container que vai trocar os ambientes
+		VBox contentContainer = new VBox();
+		contentContainer.setSpacing(10);
 
-        // Listener de troca de ambiente (cria instâncias apenas quando necessário)
+		// Inicializa com o ambiente padrão
+		contentContainer.getChildren().add(recourses);
+		navPanel.updateActiveButton("Recourses");
+
+		// Listener de troca de ambiente
 		navPanel.setOnNavChangeListener(env -> {
-		    // Limpa o conteúdo anterior
-		    contentContainer.getChildren().clear();
-		
-		    switch (env) {
-		        case "Process" -> {
-		            scrollPane.setFitToHeight(true);
-		
-				if (processPanel == null) {
-		                processPanel = new Process();
-		            }
-		
-		            // Faz o painel Process ocupar toda a altura disponível
-		            VBox.setVgrow(processPanel, Priority.ALWAYS);
-		            processPanel.setMaxHeight(Double.MAX_VALUE);
-		
-		            contentContainer.getChildren().add(processPanel);
-		        }
-		
-		        case "Recourses" -> {
-		            scrollPane.setFitToHeight(false);
-		
-		            if (recoursesPanel == null) {
-		                recoursesPanel = new Recourses();
-		            }
-		
-		            // Recourses não cresce verticalmente
-		            VBox.setVgrow(recoursesPanel, Priority.NEVER);
-		
-		            contentContainer.getChildren().add(recoursesPanel);
-		        }
-		
-		        case "Files System" -> {
-		            scrollPane.setFitToHeight(true);
-		
-		            if (filesSystemPanel == null) {
-		                filesSystemPanel = new FilesSystem();
-		            }
-		
-		            // Faz o painel FilesSystem crescer verticalmente
-		            VBox.setVgrow(filesSystemPanel, Priority.ALWAYS);
-		            filesSystemPanel.setMaxHeight(Double.MAX_VALUE);
-		
-		            contentContainer.getChildren().add(filesSystemPanel);
-		        }
+			contentContainer.getChildren().clear(); // limpa só o conteúdo
+
+			switch (env) {
+			case "Process":
+				scrollPane.setFitToHeight(true);
+				contentContainer.getChildren().add(process);
+				VBox.setVgrow(process, Priority.ALWAYS); // apenas Process cresce
+				break;
+			case "Recourses":
+				scrollPane.setFitToHeight(false);
+				contentContainer.getChildren().add(recourses);
+				break;
+			case "Files System":
+				// Adicione aqui seu painel de sistema de arquivos
+				scrollPane.setFitToHeight(true);
+				contentContainer.getChildren().add(filesSystem);
+				break;
+			}
+
+			// Atualiza destaque dos botões
+			navPanel.updateActiveButton(env);
+		});
+
+		// Adiciona NavPanel e container de conteúdo ao root
+		VBox.setVgrow(contentContainer, Priority.ALWAYS); // ocupa todo espaço restante
+		root.getChildren().addAll(navPanel, contentContainer);
+
+		// Scene
+		Scene scene = new Scene(scrollPane, 1200, 550);
+		scene.getStylesheets().add(getClass()
+				.getResource("/css/" + ConfigManager.getString("themes", "Default") + ".css").toExternalForm());
+		ThemeManager.registerScene(scene); // registra a scene principal
+
+
+		scene.setOnKeyPressed(event -> {
+
+		    if (event.getCode() == KeyCode.F11) {
+		        stage.setFullScreen(!stage.isFullScreen());
+		    } else if (event.getCode() == KeyCode.F1) {
+		        NavPanel.MenuShow(process);
+		    } else if (event.getCode() == KeyCode.F10) {
+		        Help.openLink("https://github.com/MKawan/InfoSys");
 		    }
-
-    // Atualiza destaque dos botões
-    navPanel.updateActiveButton(env);
-});
+		});
 
 
-        VBox.setVgrow(contentContainer, Priority.ALWAYS);
-        root.getChildren().addAll(navPanel, contentContainer);
+		// Define tamanho mínimo da janela
+		// stage.initStyle(StageStyle.UNDECORATED); // remove barra nativa
 
-        // Cena principal
-        Scene scene = new Scene(scrollPane, 1200, 550);
-        scene.getStylesheets().add(
-                getClass().getResource("/css/" + ConfigManager.getString("themes", "Default") + ".css").toExternalForm()
-        );
-        ThemeManager.registerScene(scene);
+		Image icon = new Image(getClass().getResourceAsStream("/icons/AppIcon.png"));
+		stage.getIcons().add(icon);
 
-        // Atalhos de teclado unificados
-        scene.setOnKeyPressed(event -> {
-            String combo = KeyMaps.getComboKeyName(event);
-            if (combo != null) {
-                System.out.println("Atalho detectado: " + combo);
-            }
+		stage.setTitle("InfoSys - System Monitor");
+		stage.setMinWidth(1200);
+		stage.setMinHeight(550);
+		stage.setOnCloseRequest(event -> {
+			Platform.exit(); // encerra todas as Scenes e Stages
+			System.exit(0); // encerra a JVM
+		});
 
-            switch (event.getCode()) {
-                case F11 -> stage.setFullScreen(!stage.isFullScreen());
-                case F1 -> {
-                    if (processPanel == null) processPanel = new Process();
-                    NavPanel.MenuShow(processPanel);
-                }
-                case F10 -> Help.openLink("https://github.com/MKawan/InfoSys");
-            }
-        });
+		stage.setScene(scene);
+		stage.show();
+	}
 
-        // Ícone do app
-        Image icon = new Image(getClass().getResourceAsStream("/icons/AppIcon.png"));
-        stage.getIcons().add(icon);
-
-        stage.setTitle("InfoSys - System Monitor");
-        stage.setMinWidth(1200);
-        stage.setMinHeight(550);
-
-        // Encerramento limpo da aplicação
-        stage.setOnCloseRequest(event -> {
-            Platform.exit();
-            System.exit(0);
-        });
-
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
-    }
+	public static void main(String[] args) {
+		launch();
+	}
 }
